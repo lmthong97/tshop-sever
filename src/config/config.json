@@ -1,9 +1,9 @@
 {
   "development": {
     "username": "root",
-    "password": "thong123",
-    "database": "tshop",
-    "host": "localhost",
+    "password": "",
+    "database": "",
+    "host": "",
     "dialect": "mysql"
   },
   "test": {
@@ -14,10 +14,10 @@
     "dialect": "mysql"
   },
   "production": {
-    "username": "bdf04afb9c50dc",
-    "password": "4c8286cb",
-    "database": "heroku_650501edd3d924a",
-    "host": "us-cdbr-east-04.cleardb.com",
+    "username": "",
+    "password": "",
+    "database": "",
+    "host": "",
     "dialect": "mysql"
   }
 }

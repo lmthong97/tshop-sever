@@ -1,7 +1,7 @@
 const express = require('express');
-const port = 3001;
 const cors = require('cors');
 require('dotenv').config();
+const connectDB = require('./config/connectDB');
 
 const db = require('./models');
 
@@ -14,8 +14,11 @@ app.use(cors());
 const productRouter = require('./router/Products');
 app.use('/products', productRouter);
 
+connectDB();
+const port = process.env.PORT || 3001;
+
 db.sequelize.sync().then(() => {
-    app.listen(process.env.PORT || port, () => {
-        console.log(`Server running on http://localhost:${port}`);
-    }).catch((err) => console.log(err));
+    app.listen(port, () => {
+        console.log(`Server is running at http://localhost:${port}`);
+    });
 });
